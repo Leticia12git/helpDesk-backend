@@ -3,6 +3,8 @@ package com.leticia.HelpDesk.entity;
 import com.leticia.HelpDesk.enums.Role;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -20,6 +22,13 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders = new ArrayList<>();
+
+    @OneToMany(mappedBy = "attendant")
+    private List<Order> attendedOrders = new ArrayList<>();
+
 
     public Long getId() {
         return id;

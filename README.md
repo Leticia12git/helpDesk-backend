@@ -54,6 +54,9 @@ Endpoint	Method	Description
 /api/tickets/{id}	PUT	Update ticket information.
 /api/tickets/{id}	DELETE	Delete a ticket.
 ```
+
+## Link para o Swagger
+- http://localhost:8080/swagger-ui/index.html#/
 Contributing
 
 Contributions are welcome! If you have suggestions for improvements or features, please fork the repository and submit a pull request.
